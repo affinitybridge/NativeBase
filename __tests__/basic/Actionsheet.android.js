@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import renderer from "react-test-renderer";
 import { Button } from "./../../src/basic/Button";
-import { ActionSheetContainer } from "./../../src/basic/ActionSheet";
+import { ActionSheet } from "./../../src/basic/ActionSheet";
 import { Text } from "./../../src/basic/Text";
 
 var REGULAR_BUTTONS = ["Option 0", "Option 1", "Option 2", "Delete", "Cancel"];
@@ -29,7 +29,7 @@ it("renders Regular ActionSheet", () => {
     .create(
       <Button
         onPress={() =>
-          ActionSheetContainer.show(
+          ActionSheet.show(
             {
               options: REGULAR_BUTTONS,
               cancelButtonIndex: CANCEL_INDEX,
@@ -54,7 +54,7 @@ it("renders Icon ActionSheet", () => {
     .create(
       <Button
         onPress={() =>
-          ActionSheetContainer.show(
+          ActionSheet.show(
             {
               options: ICON_BUTTONS,
               cancelButtonIndex: CANCEL_INDEX,
